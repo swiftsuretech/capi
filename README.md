@@ -298,7 +298,6 @@ kind delete cluster
 kind create cluster
 
 # Set up config and gcloud creds
-export GITHUB_TOKEN=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
 export GCP_PROJECT_ID=konvoy-gcp-se
 export GOOGLE_APPLICATION_CREDENTIALS=$PWD/creds.json
 export GCP_REGION=us-central1

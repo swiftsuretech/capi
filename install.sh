@@ -1,13 +1,14 @@
 #!/bin/bash
+
 # ----------------------------------------------------------------------------
 # Author : Dave Whitehouse
 # Created: Date: 15 Mar 22
 # Contact: @David Whitehouse
 # Scope  : Spin up a kommander cluster in GCP using CAPI
-# ---------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 
 info () {
-  echo -e '\n\e[0;35m'$1'\e[0;37m\n'
+  echo -e '\n\033[0;35m'$1'\033[0;37m\n'
 }
 
 # Set up our bootstrap cluster
@@ -16,7 +17,6 @@ kind delete cluster
 kind create cluster
 
 # Set up config and gcloud creds
-export GITHUB_TOKEN=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
 export GCP_PROJECT_ID=konvoy-gcp-se
 export GOOGLE_APPLICATION_CREDENTIALS=$PWD/creds.json
 export GCP_REGION=us-central1
